@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #f5e6d3;
+            --secondary-color: #e6d5c3;
+            --text-color: #4a4a4a;
+            --accent-color: #d4b5a5;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        nav {
+            background-color: var(--secondary-color);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            margin: 4rem 0;
+        }
+
+        .profile-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid var(--secondary-color);
+        }
+
+        .intro {
+            flex: 1;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            padding: 0.5rem 1rem;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: opacity 0.3s;
+        }
+
+        .social-links a:hover {
+            opacity: 0.8;
+        }
+
+        .about {
+            background-color: var(--secondary-color);
+            padding: 4rem 0;
+            margin-top: 4rem;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .profile-img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <div id="home" class="container">
+        <div class="hero">
+            <img src="/api/placeholder/300/300" alt="Your Profile Picture" class="profile-img">
+            <div class="intro">
+                <h1>Your Name</h1>
+                <p>Welcome to my portfolio! I'm a [your profession/title] passionate about [your interests/specialties]. I love creating [what you create/do] and solving [types of problems you solve].</p>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+                    <a href="mailto:your.email@example.com">Email</a>
+                    <a href="tel:+1234567890">Phone</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>Here you can write a more detailed description about your background, experience, and interests. Talk about your journey, what drives you, and what you're passionate about.</p>
+                
+                <h3>Experience</h3>
+                <p>Describe your professional experience, key achievements, and the skills you've developed along the way.</p>
+                
+                <h3>Interests</h3>
+                <p>Share your personal interests, hobbies, and what you love to do outside of work.</p>
+                
+                <h3>Resume</h3>
+                <p>Want to learn more about my professional experience? <a href="path-to-your-resume.pdf" target="_blank">View my resume</a>.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
